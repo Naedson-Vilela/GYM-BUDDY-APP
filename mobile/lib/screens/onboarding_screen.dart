@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
+import 'package:mobile/utils/app_palette.dart';
 import '../models/onboarding_page.dart';
 
 class OnboardingScreen extends StatelessWidget {
@@ -28,15 +29,21 @@ class OnboardingScreen extends StatelessWidget {
       body: IntroductionScreen(
         pages: _buildPages(),
         showSkipButton: true,
-        skip: const Text("Pular", style: TextStyle(color: Colors.grey)),
-        next: const Icon(Icons.arrow_forward, color: Colors.blue),
+        skip: const Text(
+          "Pular",
+          style: TextStyle(color: AppPalette.spaceCadet),
+        ),
+        next: const Icon(Icons.arrow_forward, color: AppPalette.spaceCadet),
         done: const Text(
           "Continuar",
-          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blue),
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: AppPalette.spaceCadet,
+          ),
         ),
         onDone: () => _onDone(context),
         dotsDecorator: _buildDotsDecorator(),
-        globalBackgroundColor: Colors.white,
+        globalBackgroundColor: AppPalette.antiFlashWhite,
         freeze: false,
       ),
     );
@@ -46,8 +53,8 @@ class OnboardingScreen extends StatelessWidget {
     return DotsDecorator(
       size: const Size(10.0, 10.0), // Tamanho dos dots inativos
       activeSize: const Size(22.0, 10.0), // Tamanho do dot ativo
-      activeColor: Colors.blue, // Cor do dot ativo
-      color: Colors.grey, // Cor dos dots inativos
+      activeColor: AppPalette.spaceCadet, // Cor do dot ativo
+      color: AppPalette.iceWhite, // Cor dos dots inativos
       activeShape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(25.0), // Forma do dot ativo
       ),
@@ -63,10 +70,10 @@ class OnboardingScreen extends StatelessWidget {
           titleTextStyle: TextStyle(
             fontSize: 28.0,
             fontWeight: FontWeight.bold,
-            color: Colors.grey[800],
+            color: AppPalette.spaceCadet,
           ),
-          bodyTextStyle: TextStyle(fontSize: 18.0, color: Colors.grey[600]),
-          pageColor: Colors.white,
+          bodyTextStyle: TextStyle(fontSize: 18.0, color: AppPalette.iceWhite),
+          pageColor: AppPalette.antiFlashWhite,
           imagePadding:
               EdgeInsets.zero, // Espaçamento para quando houver imagem
         ),
