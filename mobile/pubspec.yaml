@@ -58,6 +58,27 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
+  fonts:
+    - family: Raleway  
+      fonts:
+        - asset: assets/fonts/Raleway-Regular.ttf
+          weight: 400  
+        - asset: assets/fonts/Raleway-Italic.ttf
+          weight: 400
+          style: italic  
+        - asset: assets/fonts/Raleway-Bold.ttf
+          weight: 700   
+        - asset: assets/fonts/Raleway-BoldItalic.ttf
+          weight: 700
+          style: italic
+        - asset: assets/fonts/Raleway-Black.ttf
+          weight: 900  
+        - asset: assets/fonts/Raleway-BlackItalic.ttf
+          weight: 900
+          style: italic
+        - asset: assets/fonts/Raleway-Thin.ttf
+          weight: 100   
+
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile/utils/app_palette.dart';
 import 'screens/onboarding_screen.dart';
 import 'screens/home_screen.dart';
 
@@ -14,9 +15,21 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Onboarding Demo',
       debugShowCheckedModeBanner: false,
+
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        colorScheme: ColorScheme.light(
+          primary: AppPalette.spaceCadet,
+          secondary: AppPalette.coolGray,
+          error: AppPalette.fireEngineRed,
+          background: AppPalette.iceWhite,
+          surface: Colors.white,
+        ),
+        textTheme: const TextTheme(
+          bodyLarge: TextStyle(color: AppPalette.spaceCadet),
+        ),
         visualDensity: VisualDensity.adaptivePlatformDensity,
+        fontFamily: 'Raleway',
+        useMaterial3: true,
       ),
 
       initialRoute: '/onboarding',
